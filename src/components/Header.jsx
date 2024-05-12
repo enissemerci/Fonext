@@ -30,7 +30,7 @@ export const Header = () => {
               <Nav.Link
                 className="text-white ps-1"
                 eventKey="1"
-                href="/NewContent"
+                href="/yeniiçerik"
               >
                 <FaPlus className="" />
                 Yeni İçerik Oluştur
