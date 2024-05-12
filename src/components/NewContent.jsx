@@ -7,6 +7,7 @@ export const NewContent = () => {
     file: '',
     platform: ''
   });
+  const [imagePreview, setImagePreview] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -16,14 +17,24 @@ export const NewContent = () => {
     }));
   };
 
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setImagePreview(reader.result);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(content);
-    
   };
 
   return (
-    <div  className="d-flex align-items-center justify-content-center" style={{ height: "80vh" }}>
+    <div className="d-flex align-items-center justify-content-center" style={{ height: "80vh" }}>
       <Form className='p-4 bg-secondary' onSubmit={handleSubmit}>
         <Form.Group className='py-2' as={Row} controlId="description">
           <Form.Label column sm="2">Açıklama:</Form.Label>
@@ -35,7 +46,7 @@ export const NewContent = () => {
         <Form.Group className='py-2' as={Row} controlId="file">
           <Form.Label column sm="2">Dosya:</Form.Label>
           <Col sm="10">
-            <Form.Control type="file" name="file" onChange={handleChange} />
+            <Form.Control type="file" name="file" onChange={handleFileChange} />
           </Col>
         </Form.Group>
 
@@ -68,10 +79,14 @@ export const NewContent = () => {
             />
           </Col>
         </Form.Group>
+
+        {imagePreview && <img src={imagePreview} alt="Fotoğraf" style={{ maxWidth: "100%", maxHeight: "300px" }} />}
+        {/* imagePreview state'i doluysa, önizleme gösterilir */}
+
         <Button variant="primary" type="submit">
           Gönder
         </Button>
       </Form>
     </div>
   );
-}
+};
