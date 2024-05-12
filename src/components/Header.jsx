@@ -14,7 +14,7 @@ export const Header = () => {
       <Navbar expand="lg" className="bg-white shadow">
         <Container>
           <Navbar.Brand
-            href="/home"
+            href="/"
             className="text-primary fs-1 d-flex align-items-center"
           >
             <img

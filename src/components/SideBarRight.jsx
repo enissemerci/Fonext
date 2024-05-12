@@ -28,8 +28,8 @@ export const SideBarRight = () => {
           <Offcanvas.Title>Profile</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          <Nav defaultActiveKey="/home" className="flex-column text-center">
-            <Nav.Item href="/home">
+          <Nav defaultActiveKey="/" className="flex-column text-center">
+            <Nav.Item href="/">
               <img
                 src={foto}
                 className="rounded-pill me-3 border border-dark p-1"
