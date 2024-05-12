@@ -1,0 +1,27 @@
+.rounded-pill {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.sideBar {
+  position: fixed;
+  background-color: white;
+  height: 100%;
+  padding-top: 40px;
+  width: 250px;
+}
+.sideBar a {
+  color: black;
+}
+.sideBar a:hover {
+  color: blue;
+  background-color: lightgray;
+}
+
+@media only screen and (max-width: 992px) {
+  .sideBar {
+    left: -251px;
+  }
+  .SideBarRight {
+    right: -251px;
+  }
+}
