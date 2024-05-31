@@ -41,7 +41,7 @@ function BarChartComponent() {
   const salesData = generateSalesData();
 
   return (
-    <ResponsiveContainer width="90%" height={400}>
+    <ResponsiveContainer width="100%" height={400}>
       <h3>Toplam Beğeni</h3>
       <BarChart width={500} height={300} data={salesData} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
         <YAxis />

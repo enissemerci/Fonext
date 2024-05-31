@@ -40,50 +40,50 @@ function SimpleLineChart({ selectedSocialMedia }) {
   ];
 
   return (
-    <div className="d-flex gap-5">
-      <div>
-        <Row className={statClasses} style={{ width: 400 }}>
-          <Col md={7}>
+    <Row className="d-flex flex-wrap">
+      <Col lg={4} md={6} sm={12} className="mb-3">
+        <Row className={statClasses} style={{ maxWidth: '100%' }}>
+          <Col xs={7}>
             <h4>Takipçi</h4>
             <p className="fs-2 fs-bold">{socialMediaFollower}</p>
             <p style={{ fontSize: 15 }}>Geçen haftaya göre ...</p>
           </Col>
-          <Col md={4}>
+          <Col xs={5}>
             <LineChart width={150} height={150} data={socialMediaFollowerCount}>
               <Line type="monotone" dataKey="follower" dot={false} stroke="#fff" />
             </LineChart>
           </Col>
         </Row>
-      </div>
-      <div>
-        <Row className={statClasses} style={{ width: 400 }}>
-          <Col md={7}>
+      </Col>
+      <Col lg={4} md={6} sm={12} className="mb-3">
+        <Row className={statClasses} style={{ maxWidth: '100%' }}>
+          <Col xs={7}>
             <h4>Paylaşımlar</h4>
             <p className="fs-2 fs-bold">{socialMediaPosts.length}</p>
             <p style={{ fontSize: 15 }}>Geçen haftaya göre ...</p>
           </Col>
-          <Col md={4}>
+          <Col xs={5}>
             <LineChart width={150} height={150} data={socialMediaPostCount}>
               <Line type="monotone" dataKey="postCount" dot={false} stroke="#fff" />
             </LineChart>
           </Col>
         </Row>
-      </div>
-      <div>
-        <Row className={statClasses} style={{ width: 400 }}>
-          <Col md={7}>
+      </Col>
+      <Col lg={4} md={6} sm={12} className="mb-3">
+        <Row className={statClasses} style={{ maxWidth: '100%' }}>
+          <Col xs={7}>
             <h4>Toplam Beğeni</h4>
             <p className="fs-2 fs-bold">{totalLikes}</p>
             <p style={{ fontSize: 15 }}>Geçen haftaya göre ...</p>
           </Col>
-          <Col md={4}>
+          <Col xs={5}>
             <LineChart width={150} height={150} data={socialMediaLikeCount}>
               <Line type="monotone" dataKey="likeCount" dot={false} stroke="#fff" />
             </LineChart>
           </Col>
         </Row>
-      </div>
-    </div>
+      </Col>
+    </Row>
   );
 }
 

@@ -62,23 +62,25 @@ export default function Statistics() {
   return (
     <main className="p-5 bg-light d-flex flex-column align-items-center justify-content-center">
       <Container>
-        <SocialMedias socialMediasData={socialMediasData} onSelectSocialMedia={handleSelectSocialMedia} btnClasses={btnClasses} />
-        <Row className="my-3">
-          <Col lg={4} sm={12}>
-            <SimpleLineChart selectedSocialMedia={socialMedia} />
+        <Row>
+          <Col lg={12} className="d-flex">
+            <SocialMedias socialMediasData={socialMediasData} onSelectSocialMedia={handleSelectSocialMedia} btnClasses={btnClasses} />
           </Col>
         </Row>
+        <div className="my-3">
+          <SimpleLineChart selectedSocialMedia={socialMedia} />
+        </div>
         <h3 className="my-5 text-dark fs-bold">Sosyal Medyalar Arası Karşılaştırma</h3>
         <Row className="my-4 p-2">
           <h3>Toplam Beğeni</h3>
-          <Col lg={6}>
+          <Col lg={6} sm={12}>
             <LineChartComponent />
           </Col>
-          <Col lg={6}>
-            <h3>Paylaşılan Post</h3>
+          <Col lg={6} sm={12}>
+            {/* <h3>Paylaşılan Post</h3> */}
             <AreaChartComponent />
           </Col>
-          <Col lg={10} className="d-flex justify-content-center mx-auto mt-5">
+          <Col lg={10} sm={12} className="d-flex justify-content-center mx-auto mt-5">
             <BarChartComponent />
           </Col>
         </Row>

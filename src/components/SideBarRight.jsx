@@ -10,6 +10,7 @@ import {
   FaCar,
   FaBars,
 } from "react-icons/fa";
+import PieChartComponent from "../components/Charts/PieChart";
 
 export const SideBarRight = () => {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -78,6 +79,7 @@ export const SideBarRight = () => {
               <FaLinkedin /> Linkedin{" "}
             </Nav.Link>
           </Nav>
+          <PieChartComponent />
         </Offcanvas.Body>
       </Offcanvas>
     </div>

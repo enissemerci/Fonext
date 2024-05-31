@@ -86,8 +86,8 @@ function LineChartComponent() {
   const socialData = generateSocialData();
 
   return (
-    <ResponsiveContainer width="90%" height="100%">
-      <LineChart width={500} height={400} data={socialData} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+    <ResponsiveContainer width="100%" height={400}>
+      <LineChart data={socialData} margin={{ top: 20, right: 30, left: 20, bottom: 20 }}>
         <YAxis />
         <XAxis dataKey="name" />
         <CartesianGrid strokeDasharray="3 3" />

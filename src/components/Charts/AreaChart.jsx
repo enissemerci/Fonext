@@ -29,33 +29,28 @@ function AreaChartComponent() {
   const postLikes = generatePostData();
 
   return (
-    <div>
-      <ResponsiveContainer width="95%" height={300}>
-        <AreaChart
-          width={400}
-          height={400}
-          data={postLikes}
-          margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
-          syncId="anyId"
-        >
-          <XAxis dataKey="name" />
-          <YAxis />
-          <CartesianGrid />
-          <Tooltip />
-          <Legend />
-          {Object.keys(socialMediaData).map((platform, index) => (
-            <Area
-              key={index}
-              type="monotone"
-              dataKey={platform}
-              stroke={getStrokeColor(platform)}
-              fill={getFillColor(platform)}
-              stackId={1}
-            />
-          ))}
-        </AreaChart>
-      </ResponsiveContainer>
-    </div>
+    <ResponsiveContainer width="100%" height={400}>
+      <AreaChart
+        data={postLikes}
+        margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
+      >
+        <XAxis dataKey="name" />
+        <YAxis />
+        <CartesianGrid strokeDasharray="3 3" />
+        <Tooltip />
+        <Legend />
+        {Object.keys(socialMediaData).map((platform, index) => (
+          <Area
+            key={index}
+            type="monotone"
+            dataKey={platform}
+            stroke={getStrokeColor(platform)}
+            fill={getFillColor(platform)}
+            stackId="1"
+          />
+        ))}
+      </AreaChart>
+    </ResponsiveContainer>
   );
 }
 
