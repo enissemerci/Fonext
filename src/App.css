@@ -1,38 +1,85 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100vh;
+}
+
+.sidebar {
+  width: 200px; /* Genişliği azaltıldı */
+  background-color: #ffffff; /* Beyaz renk */
+  padding: 20px;
+  color: #333; /* Siyah yazı rengi */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Hafif gölge ekleyelim */
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 15px 0; /* Daha geniş padding */
+  cursor: pointer;
+  color: #333; /* Siyah yazı rengi */
+  font-weight: bold;
+}
+
+.sidebar li:hover {
+  background-color: #f0f0f0; /* Hover rengi için açık gri */
+}
+
+.settings-content {
+  width: 500px; /* Kare şeklinde genişlik ve yükseklik */
+  height: 500px;
+  padding: 30px; /* Padding arttırıldı */
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Ortaya hizalama */
+}
+
+form div {
+  margin-bottom: 15px; /* Margin arttırıldı */
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 10px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+form input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #4267B2; /* Facebook mavi */
   color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form button:hover {
+  background-color: #365899;
 }
