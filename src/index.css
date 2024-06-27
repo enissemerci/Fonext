@@ -1,0 +1,410 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: #e8eeff;
+}
+
+.calendar {
+  max-width: 880px;
+  min-width: 420px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.daysContainer {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.day {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: clamp(8px, 2vw, 12px);
+  aspect-ratio: 1;
+  overflow: hidden;
+  border: 1px solid #e1e7ec;
+}
+
+.days-of-week {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.day-of-week {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  aspect-ratio: 1/6;
+  padding: 8px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.day-of-week:not(:last-child) {
+  border-right: 1px solid #e7e7e7;
+}
+
+.weekDays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.weekDay {
+  padding: 8px 0;
+  text-align: center;
+  font-size: 12px;
+}
+
+.disableDay {
+  color: #9e9e9e;
+  background: repeating-linear-gradient(-45deg,
+      #efeeee,
+      #efeeee 2px,
+      #fff 1px,
+      #fff 10px);
+}
+
+.today {
+  background-color: #1557ff;
+  color: white;
+}
+
+.more {
+  font-size: 12px;
+  font-weight: 500;
+  color: #1557ff;
+  cursor: pointer;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding: 16px;
+}
+
+.calendar-header .date {
+  text-wrap: nowrap;
+  font-size: clamp(18px, 4vw, 24px);
+}
+
+.date__month {
+  font-weight: 600;
+}
+
+.changer {
+  display: flex;
+  align-items: center;
+  gap: clamp(4px, 4vw, 24px);
+}
+
+.format {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.btn {
+  appearance: none;
+  background-color: #fafbfc;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: clamp(4px, 4vw, 6px);
+  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0,
+    rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  box-sizing: border-box;
+  color: #24292e;
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: clamp(12px, 2vw, 14px);
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  padding: clamp(4px, 1vw, 8px) clamp(8px, 2vw, 12px);
+  position: relative;
+  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  word-wrap: break-word;
+}
+
+.btn-icon {
+  aspect-ratio: 1;
+}
+
+.toggle {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.toggle .btn:nth-child(1) {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.toggle .btn:nth-child(2) {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.btn:hover {
+  background-color: #f3f4f6;
+  text-decoration: none;
+  transition-duration: 0.1s;
+}
+
+.btn:disabled {
+  background-color: #fafbfc;
+  border-color: rgba(27, 31, 35, 0.15);
+  color: #959da5;
+  cursor: default;
+}
+
+.btn.active,
+.btn:active {
+  background-color: #edeff2;
+  box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+  transition: none 0s;
+}
+
+.btn:focus {
+  outline: 1px transparent;
+}
+
+.btn:before {
+  display: none;
+}
+
+.btn:-webkit-details-marker {
+  display: none;
+}
+
+.more-popup-container {
+  width: 350px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 6px 14px -6px rgba(24, 39, 75, 1);
+  background-color: #fff;
+  position: absolute;
+}
+
+.post-item {
+  padding: 12px 16px;
+  display: flex;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.post-item:hover {
+  background-color: #e8eeff;
+}
+
+.post-item .info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.profile {
+  position: relative;
+}
+
+.profile .platform {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+
+  position: absolute;
+  right: -5px;
+  top: -5px;
+}
+
+.profile .avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 32px;
+}
+
+.more-popup-container .post-item .username {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.more-popup-container .post-item .content {
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.more-popup-container .date {
+  font-size: 12px;
+  color: #5b5a5a;
+}
+
+.badges {
+  display: flex;
+  gap: 4px;
+  width: 100%;
+  align-items: center;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+
+.badge-container {
+  color: white;
+  font-size: 12px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.username {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.post-popup-container {
+  width: 350px;
+  border-radius: 10px;
+  padding: 16px 0;
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  box-shadow: 0px 6px 14px -6px rgba(24, 39, 75, 1);
+  background-color: #fff;
+  position: absolute;
+}
+
+.post-popup-container .medias {
+  padding: 0 16px;
+}
+
+.post-popup-container .medias img {
+  display: block;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 1px solid #e1e7ec;
+}
+
+.post-popup-container .slick-list img,
+.post-popup-container .slick-list video,
+.post-popup-container .slick-list iframe {
+  height: 350px;
+  width: 350px;
+  object-fit: cover;
+}
+
+.slick-dots {
+  padding: 8px 0 !important;
+}
+
+.slick-dots li {
+  margin: 0 !important;
+}
+
+.slick-dots li button::before {
+  color: #1557ff !important;
+  font-size: 10px !important;
+}
+
+.post-popup-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 16px;
+}
+
+.post-popup-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-popup-header .data {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.post-popup-header .info {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-popup-header .info .username {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.post-popup-header .status {
+  color: #fff;
+  font-size: 12px;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.post-popup-header div .platform {
+  font-size: 12px;
+  color: #5b5a5a;
+}
+
+.post-popup-container .content {
+  font-size: 16px;
+  padding: 0 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.post-popup-container .section {
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.post-popup-container .section .name {
+  font-size: 12px;
+  color: #5b5a5a;
+}
+
+.post-popup-container .section .value {
+  font-size: 14px;
+}
+
+.post-popup-container .actions {
+  display: flex;
+  gap: 8px;
+  padding: 0 16px;
+}
+
+.post-popup-container .actions button {
+  flex: 1;
+}

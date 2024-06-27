@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "createdTime": "Mon Apr 15 2024 09:30:00 GMT+0300 (GMT+03:00)",
+    "scheduledTime": "Mon Apr 29 2024 09:30:00 GMT+0300 (GMT+03:00)",
+    "platform": "instagram",
+    "status": "cancelled",
+    "profile": "https://i.ibb.co/dGVbBC3/441129266-1107339083867384-963987970189741637-n.jpg",
+    "username": "FoNext",
+    "creator": "Ceylin Derin Türkoğlu",
+    "medias": [
+      "https://picsum.photos/id/29/300/300",
+      "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+    ],
+    "content": "Birlikte daha güçlüyüz! 💪 #birlikte #güç"
+  },
+  {
+    "id": 2,
+    "createdTime": "Mon Apr 15 2024 09:30:00 GMT+0300 (GMT+03:00)",
+    "scheduledTime": "Mon Apr 29 2024 09:30:00 GMT+0300 (GMT+03:00)",
+    "platform": "x",
+    "status": "published",
+    "profile": "https://i.ibb.co/dGVbBC3/441129266-1107339083867384-963987970189741637-n.jpg",
+    "username": "FoNextX",
+    "creator": "Merve Punar",
+    "medias": [
+      "https://picsum.photos/id/17/300/300",
+      "https://picsum.photos/id/12/300/300"
+    ],
+    "content": "Günaydın! Yeni bir gün, yeni bir başlangıç demektir. 🌅 #günaydın #yenibaşlangıç"
+  },
+  {
+    "id": 3,
+    "createdTime": "Mon Apr 15 2024 09:30:00 GMT+0300 (GMT+03:00)",
+    "scheduledTime": "Mon Apr 29 2024 09:30:00 GMT+0300 (GMT+03:00)",
+    "platform": "youtube",
+    "status": "draft",
+    "profile": "https://i.ibb.co/dGVbBC3/441129266-1107339083867384-963987970189741637-n.jpg",
+    "username": "FoNext",
+    "creator": "Ceylin Derin Türkoğlu",
+    "medias": ["https://www.youtube.com/embed/jNQXAC9IVRw"],
+    "content": "Bu hafta kanalımda sizinle çok özel bir röportajı paylaşacağım! 🎙️ #röportaj #youtube"
+  },
+  {
+    "id": 4,
+    "createdTime": "Mon Apr 15 2024 09:30:00 GMT+0300 (GMT+03:00)",
+    "scheduledTime": "Mon May 13 2024 09:30:00 GMT+0300 (GMT+03:00)",
+    "platform": "youtube",
+    "status": "scheduled",
+    "profile": "https://i.ibb.co/dGVbBC3/441129266-1107339083867384-963987970189741637-n.jpg",
+    "username": "FoNext",
+    "creator": "Ceylin Derin Türkoğlu",
+    "medias": ["https://www.youtube.com/embed/jNQXAC9IVRw"],
+    "content": "Bu hafta kanalımda sizinle çok özel bir röportajı paylaşacağım! 🎙️ #röportaj #youtube"
+  },
+  {
+    "id": 2,
+    "createdTime": "Fri Jun 14 2024 10:00:00 GMT+0300 (GMT+03:00)",
+    "scheduledTime": "Mon Jun 24 2024 10:00:00 GMT+0300 (GMT+03:00)",
+    "platform": "youtube",
+    "status": "scheduled",
+    "profile": "https://i.ibb.co/dGVbBC3/441129266-1107339083867384-963987970189741637-n.jpg",
+    "username": "FoNext",
+    "creator": "Ceylin Derin Türkoğlu",
+    "medias": [
+      "https://picsum.photos/id/24/300/300",
+      "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+    ],
+    "content": "Yeni bir gün, yeni fırsatlar! 🌞 #motivasyon #başarı"
+  },
+  {
+    "id": 3,
+    "createdTime": "Fri Jun 17 2024 11:00:00 GMT+0300 (GMT+03:00)",
+    "scheduledTime": "Thu Jun 27 2024 11:00:00 GMT+0300 (GMT+03:00)",
+    "platform": "youtube",
+    "status": "scheduled",
+    "profile": "https://i.ibb.co/dGVbBC3/441129266-1107339083867384-963987970189741637-n.jpg",
+    "username": "FoNext",
+    "creator": "Ceylin Derin Türkoğlu",
+    "medias": [
+      "https://picsum.photos/id/27/300/300",
+      "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4"
+    ],
+    "content": "Günün tadını çıkarın! 😊 #mutluluk #anlar"
+  }
+]

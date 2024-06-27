@@ -1,0 +1,5 @@
+- [x] Önceki ay ve sonraki aydaki postlar gözükmüyor.
+- [x] Gün kutularının yüksekliğine göre post badge'leri gösterilecek geri kalan postların adeti altta (+3 gönderi daha) yazacak
+- [x] Daha fazla post varsa o güne tıklandığında tüm postların badge'lerinin listeleneceği bir popup gözükecek
+- [x] Post Badge'lerine tıklandığında o postun detayları için popup gösterilecek. Post Popup'ında kullanıcı profil fotoğrafı, kullanıcı adı, platform adı, varsa medyaları, varsa açıklaması (maksimum 2 satır), planlanan tarih, oluşturan kişinin foNext'teki adı, düzenle ve kaldır butonu olacak.
+- [x] Ay ve yıl değişimi. Ağer ay 1 iken azaltılırsa 12 olur ve önceki yıla geçilir, eğer ay 12 iken artırılırsa 1 olur ve sonraki yıla geçilir. 
